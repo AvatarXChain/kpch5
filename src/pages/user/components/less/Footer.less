@@ -1,0 +1,164 @@
+
+@import "../../../../assets/less/base.less";
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  > .photo {
+    position: relative;
+    min-height: 120px;
+    padding: 20px;
+    text-align: center;
+
+    > .photo-wrapper {
+      display: inline-block;
+      padding: 4px;
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      #gradient > .vertical(#e61a73, #6f00ff);
+
+      > .photo-inner {
+        width: 78px;
+        height: 78px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        background-color: #333;
+
+        > .photo-btn {
+          height: 115px;
+          background: none;
+          border: none;
+
+          &:before {
+            border: none;
+          }
+
+          > span {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            line-height: 30px;
+            color: #333;
+            font-size: 18px;
+          }
+
+          > .icon {
+            color: #fff;
+            font-size: 40px;
+            line-height: 70px;
+          }
+        }
+
+        > .photo-btn-active {
+          .opacity(.8);
+        }
+      }
+    }
+
+    > .signout {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -45px;
+
+      > a {
+        padding: 0 5px 0 0;
+        width: 40px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border: none;
+        border-radius: 0 30px 30px 0;
+
+        &:before {
+          border: none;
+        }
+
+        > .icon-signout {
+          font-size: 16px;
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+  }
+
+  > .action {
+    padding: 20px 10px;
+    // display: flex;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    a {
+      margin: 0 5px;
+      flex: 1;
+      border-radius: 24px;
+      color: @color-primary;
+
+      &:before {
+        border: none;
+      }
+
+      &:first-child {
+        background: @color-primary;
+        color: #eee;
+      }
+
+      > .icon-action {
+        margin-right: 4px;
+        font-size: 20px;
+        vertical-align: -1px;
+      }
+    }
+  }
+}
+
+:global {
+  .am-modal-transparent {
+
+    .am-modal-content {
+      padding-top: 0;
+
+      > .am-modal-body {
+        padding: 0;
+      }
+    }
+  }
+  
+  .am-modal-footer {
+    background-color: @color-primary;
+
+    & .am-modal-button {
+      color: #fff;
+
+      &:before {
+        background-color: @color-primary !important;
+      }
+    }
+  }
+
+  .am-flexbox-item {
+    min-width: 62px !important;
+  }
+}
+
+.modal-upload {
+  min-height: 240px;
+  background-image: url(../../../../assets/images/mining-sucess-bg.png);
+  background-size: 100%;
+  background-color: #e2da4e;
+
+  > .message {
+    display: inline-block;
+    margin-top: 70px;
+    padding: 10px;
+    height: 60px;
+    background-color: rgba(233, 30, 99, 0.8);
+    // background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+  }
+}

@@ -1,0 +1,78 @@
+
+@import "../../../../assets/less/base.less";
+
+.header {
+  position: relative;
+  min-height: 360px;
+  text-align: center;
+  background-color: @color-primary;
+  background-image: url(../../../../assets/images/background-computed.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  > .computed {
+    padding-top: 20px;
+    height: 200px;
+
+    > .title {
+      color: darken(#fff, 10%);
+    }
+
+    > .number {
+      color: @color-success;
+      font-size: 28px;
+      font-weight: 400;
+    }
+  }
+
+  > .count-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .clearfix;
+    display: flex;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    > .item {
+      flex: 1;
+
+      > a {
+        display: block;
+        padding: 15px 0;
+
+        > .title {
+          color: darken(#fff, 30%);
+          font-size: 12px;
+        }
+
+        > .number {
+          padding: 0 0 8px 0;
+          color: @color-success;
+          font-size: 20px;
+        }
+
+        > .btn-more {
+          display: inline-block;
+          padding: 0 20px;
+          height: 26px;
+          line-height: 26px;
+          background-color: rgba(0, 0, 0, 0.2);
+          border-radius: 13px;
+          font-size: 12px;
+          color: #fff;
+        }
+      }
+
+      &:first-child {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      &:last-child {
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}

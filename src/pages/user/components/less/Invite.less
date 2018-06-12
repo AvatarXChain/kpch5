@@ -1,0 +1,150 @@
+
+@import "../../../assets/less/base.less";
+
+.invite-container {
+  height: 100vh;
+  #gradient > .vertical(#9D13E8, #4502D9);
+
+  > .header {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.15);
+
+    > .count {
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.2);
+
+      > .item {
+        flex: 1;
+
+        > .info {
+          margin: 10px 0 0 0;
+          line-height: 30px;
+          color: #fff;
+          font-weight: 300;
+        }
+
+        > .number {
+          margin-bottom: 5px;
+          line-height: 50px;
+          font-size: 1.8rem;
+          font-weight: 300;
+          color: @color-success;
+        }
+      }
+    }
+  }
+
+  > .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    > .photo {
+      position: relative;
+      min-height: 120px;
+      padding: 20px;
+      text-align: center;
+
+      > .photo-wrapper {
+        display: inline-block;
+        padding: 4px;
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+        #gradient > .vertical(#e61a73, #6f00ff);
+
+        > .photo-inner {
+          width: 78px;
+          height: 78px;
+          border-radius: 50%;
+          border: 3px solid #fff;
+          background-color: #333;
+
+          > .photo-btn {
+            height: 115px;
+            background: none;
+            border: none;
+
+            &:before {
+              border: none;
+            }
+
+            > span {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              line-height: 30px;
+              color: #fff;
+              font-size: 18px;
+            }
+
+            > .icon {
+              color: #fff;
+              font-size: 40px;
+              line-height: 70px;
+            }
+          }
+
+          > .photo-btn-active {
+            .opacity(.8);
+          }
+        }
+      }
+
+      > .signout {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -45px;
+
+        > a {
+          padding: 0 5px 0 0;
+          width: 40px;
+          background-color: rgba(0, 0, 0, 0.2);
+          border: none;
+          border-radius: 0 30px 30px 0;
+
+          &:before {
+            border: none;
+          }
+
+          > .icon-signout {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+
+    > .action {
+      padding: 20px 10px;
+      // display: flex;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.2);
+
+      a {
+        margin: 0 5px;
+        flex: 1;
+        border-radius: 24px;
+        color: @color-primary;
+
+        &:before {
+          border: none;
+        }
+
+        &:first-child {
+          background: rgba(0, 0, 0, .4);
+          color: #eee;
+        }
+
+        > .icon-action {
+          margin-right: 4px;
+          font-size: 20px;
+          vertical-align: -1px;
+        }
+      }
+    }
+  }
+}

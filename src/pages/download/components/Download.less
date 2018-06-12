@@ -1,0 +1,179 @@
+
+@import "../../../assets/less/base.less";
+
+body {
+  background-color: #f2f2f2;
+}
+
+@-webkit-keyframes iconspin {
+  from { translate: translateY(-10px); }
+  to { translate: translateY(0); }
+}
+
+@keyframes iconspin {
+  from { translate: translateY(-10px); }
+  to { translate: translateY(0); }
+}
+
+.download {
+  height: 100vh;
+  #gradient > .vertical(#9013fe, #2158e9);
+
+  > .page1 {
+    height: 100vh;
+    text-align: center;
+
+    > .header {
+      padding: 10% 0;
+      color: white;
+
+      > .logo {
+        margin: 0 auto;
+        margin-top: 5%;
+        display: inline-block;
+        width: 60px;
+        // animation: bottom-icon-spin infinite 20s linear;
+        height: 60px;
+        background-image: url(../../../assets/images/logo.png);
+        background-repeat: no-repeat;
+        background-size: 60px auto;
+      }
+
+      > .title {
+        margin: 5px 0;
+        font-size: 1em;
+        color: #eee;
+      }
+    }
+
+    > .main {
+      min-height: 400px;
+      background-image: url(../../../assets/images/background.png);
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center top;
+
+      > .slogan-main {
+        font-size: 2.5em;
+        font-weight: 400;
+        color: #fff;
+
+        > .light {
+          color: @color-success;
+        }
+      }
+
+      > .slogan-sub {
+        color: #eee;
+      }
+
+      > .action {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-top: 30px;
+        background-color: rgba(0, 0, 0, 0.2);
+
+        > .btn {
+          margin: 0 10%;
+          margin-bottom: 20px;
+          border-radius: 48px;
+          color: #9013fe;
+
+          > .icon-action {
+            margin-right: 5px;
+            font-size: 1.8em;
+            vertical-align: -4px;
+          }
+        }
+
+        > .btn2 {
+          display: block;
+          margin: 0 10%;
+          margin-bottom: 20px;
+          height: 56px;
+          line-height: 56px;
+          border-radius: 28px;
+          background: #fff;
+          font-size: 1.25em;
+          color: #9013fe;
+
+          > .icon-action {
+            margin-right: 5px;
+            font-size: 1.8em;
+            vertical-align: -4px;
+          }
+        }
+
+        > .ios-guide-info {
+          display: block;
+          height: 20px;
+          line-height: 20px;
+          font-size: 14px;
+          color: #ccc;
+
+          > .light {
+            color: @color-success;
+          }
+        }
+
+        > .ios-guide-icon {
+          display: block;
+          margin-bottom: 15px;
+          color: #fff;
+
+          > .icon-action {
+            font-size: 20px;
+            .animation(iconspin infinite 20s linear);
+          }
+        }
+      }
+    }
+  }
+
+  > .help {
+    margin: 10px;
+    padding: 5px 15px;
+
+    > .help-list-item {
+      padding: 0;
+      list-style: none;
+
+      > .item {
+        position: relative;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+
+        > .number {
+          float: left;
+          margin-right: 10px;
+          width: 28px;
+          height: 28px;
+          line-height: 28px;
+          border-radius: 50%;
+          background-color: #7900ff;
+          color: #fff;
+          font-style: normal;
+          text-align: center;
+        }
+
+        > .info {
+          padding-left: 38px;
+          line-height: 24px;
+          color: #333;
+
+          >.important {
+            color: #7900ff;
+            font-weight: bold;
+          }
+        }
+
+        > .img {
+          margin-bottom: 10px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

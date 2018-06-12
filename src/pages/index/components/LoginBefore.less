@@ -1,0 +1,49 @@
+
+@import "../../../assets/less/base.less";
+
+.home-container {
+  height: 100vh;
+  background-image: url(../../../assets/images/background.png);
+  background-size: 110% auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  > .header {
+    position: relative;
+    padding-top: 30px;
+    text-align: center;
+    z-index: 10;
+
+    > .logo {
+      margin: 0 auto;
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background-image: url(../../../assets/images/logo.png);
+      background-repeat: no-repeat;
+      background-size: 60px auto;
+    }
+
+    > .name {
+      color: #fff;
+      font-size: 1.5em;
+    }
+
+    > .slogan-sub {
+      margin-top: 5px;
+      color: #fff;
+      font-size: 12px;
+    }
+
+    > .slogan-main {
+      margin-top: 12%;
+      font-size: 2.5em;
+      font-weight: 400;
+      color: #fff;
+
+      > .light {
+        color: @color-success;
+      }
+    }
+  }
+}

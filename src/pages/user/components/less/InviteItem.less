@@ -1,0 +1,35 @@
+
+@import "../../../assets/less/base.less";
+
+.item {
+  display: flex;
+  padding: 0 10px;
+  height: 36px;
+  line-height: 36px;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+
+  &:first-child {
+    border-top: none;
+  }
+
+  > .row1,
+  > .row2,
+  > .row3 {
+    color: #aaa;
+  }
+
+  > .row1 {
+    flex: 2;
+    text-align: left;
+  }
+
+  > .row2 {
+    flex: 1;
+    color: @color-success;
+  }
+
+  > .row3 {
+    flex: 2;
+    text-align: right;
+  }
+}
